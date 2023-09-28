@@ -1,4 +1,3 @@
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 
 class ResumeScreen extends StatelessWidget {
@@ -6,11 +5,12 @@ class ResumeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final message = ModalRoute.of(context)!.settings.arguments as RemoteMessage;
+    // final message = ModalRoute.of(context)!.settings.arguments as RemoteMessage;
+    final id = ModalRoute.of(context)!.settings.arguments as String;
 
-    String title = message.notification?.title ?? "";
-    String body = message.notification?.body ?? "";
-    Map<String, dynamic> data = message.data;
+    // String title = message.notification?.title ?? "";
+    // String body = message.notification?.body ?? "";
+    // Map<String, dynamic> data = message.data;
 
     return Scaffold(
       body: Center(
@@ -18,11 +18,7 @@ class ResumeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text("Resume"),
-            Text("title : $title"),
-            Text("body : $body"),
-            Text("data: $data"),
-            Text("data: ${data['parent']}"),
-            Text("data: ${data['id']}"),
+            Text("data: $id"),
           ],
         ),
       ),
