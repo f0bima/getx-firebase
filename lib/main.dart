@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testi/api/firebase_api.dart';
 import 'package:testi/home_page.dart';
-import 'package:testi/notification_screen.dart';
+import 'package:testi/course_screen.dart';
+import 'package:testi/resume_screen.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 void main() async {
@@ -35,8 +36,14 @@ class MyApp extends StatelessWidget {
           transitionDuration: const Duration(milliseconds: 500),
         ),
         GetPage(
-          name: '/notif',
-          page: () => const NotificationScreen(),
+          name: '/resume',
+          page: () => const ResumeScreen(),
+          transition: Transition.leftToRightWithFade,
+          transitionDuration: const Duration(milliseconds: 500),
+        ),
+        GetPage(
+          name: '/course',
+          page: () => const CourseScreen(),
           transition: Transition.leftToRightWithFade,
           transitionDuration: const Duration(milliseconds: 500),
         ),

@@ -1,8 +1,8 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 
-class NotificationScreen extends StatelessWidget {
-  const NotificationScreen({super.key});
+class CourseScreen extends StatelessWidget {
+  const CourseScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +17,12 @@ class NotificationScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Text("Course"),
             Text("title : $title"),
             Text("body : $body"),
             Text("data: $data"),
+            Text("data: ${data['parent']}"),
+            Text("data: ${data['id']}"),
           ],
         ),
       ),

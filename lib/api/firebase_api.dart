@@ -10,7 +10,8 @@ Future<void> handleBackgroundMessage(RemoteMessage message) async {
     print("background");
     print('title ${message.notification?.title}');
     print('body ${message.notification?.body}');
-    print('data ${message.data}');
+    print('data ${message.data['id']}');
+    print('data ${message.data['parent']}');
   }
 }
 
@@ -28,8 +29,10 @@ class FirebaseApi {
 
   void handleMessage(RemoteMessage? message) {
     if (message == null) return;
+    Map<String, dynamic> data = message.data;
+    String parent = data['parent'];
     navigatorKey.currentState?.pushNamed(
-      'notif',
+      parent,
       arguments: message,
     );
   }
