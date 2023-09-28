@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "172633594401",
+    "project_id": "flutter-test-f703f",
+    "storage_bucket": "flutter-test-f703f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172633594401:android:7e8da2999f6b5e172c2160",
+        "android_client_info": {
+          "package_name": "com.example.testi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMfxhaj4J3EKlUqzyRrZJVHLj-b0NqVD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
